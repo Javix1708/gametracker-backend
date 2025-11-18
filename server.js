@@ -30,7 +30,7 @@ mongoose
 app.use("/api/juegos", juegosRoutes);
 app.use("/api/resenas", resenasRoutes);
 
-// Ruta raíz mínima (opcional)
+// Ruta raíz mínima
 app.get("/", (req, res) => {
   res.json({ message: "GameTracker API funcionando" });
 });
