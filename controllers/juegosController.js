@@ -16,17 +16,15 @@ export const obtenerJuegos = async (req, res) => {
 export const agregarJuego = async (req, res) => {
   try {
 
-    // ------------------------------
-    // 🔥 LOGS PARA VER QUÉ LLEGA
-    // ------------------------------
+  
     console.log("HEADERS:", req.headers["content-type"]);
     console.log("BODY RECIBIDO:", req.body);
 
     // Si llega vacío, avisa también
     if (!req.body || Object.keys(req.body).length === 0) {
-      console.log("⚠️ EL BODY LLEGÓ VACÍO");
+      console.log("El body esta vacio");
     }
-    // ------------------------------
+  
 
     const nuevo = await Juego.create(req.body);
     res.status(201).json(nuevo);

@@ -9,7 +9,7 @@ import resenasRoutes from "./routes/resenasRoutes.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));  // 👈 NECESARIO
+app.use(express.urlencoded({ extended: true }));  
 
 // Conectar a MongoDB
 const mongoUri = process.env.MONGO_URI;
